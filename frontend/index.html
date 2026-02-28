@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Cyber Security Students Club (CSSC) – Empowering students with cybersecurity knowledge, ethical hacking skills, and digital responsibility at university level." />
+    <title>CSSC – Cyber Security Students Club</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/logo.png" type="image/png" />
+</head>
+
+<body>
+
+    <!-- Animated Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-brand">
+            <img src="assets/logo.png" alt="CSSC Logo" class="nav-logo"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="nav-logo-placeholder" style="display:none;">CSSC</div>
+            <div>
+                <div class="nav-title">CSSC</div>
+                <div class="nav-subtitle">CYBER SECURITY STUDENTS CLUB</div>
+            </div>
+        </a>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="ethics.html">Cyber Ethics</a></li>
+            <li><a href="policies.html">Policies</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="register.html" class="nav-cta">Join Club</a></li>
+        </ul>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html">🏠 Home</a>
+        <a href="about.html">👨‍💻 About CSSC</a>
+        <a href="ethics.html">⚖️ Cyber Ethics</a>
+        <a href="policies.html">📜 Policies</a>
+        <a href="team.html">👥 Team</a>
+        <a href="register.html">📝 Join Club</a>
+    </nav>
+
+    <!-- ============================================================
+     MAIN CONTENT
+     ============================================================ -->
+    <main class="page-wrapper">
+
+        <!-- == HERO SECTION == -->
+        <section class="hero" id="hero">
+            <div class="hero-badge">🛡️ UNIVERSITY TECHNICAL CLUB · EST. 2026</div>
+
+            <div class="hero-logo">
+                <img src="assets/logo.png" alt="CSSC Logo"
+                    style="width:100%;height:100%;object-fit:cover;border-radius:50%;"
+                    onerror="this.style.display='none'; this.parentElement.textContent='CSSC';" />
+            </div>
+
+            <h1 class="hero-title">
+                <span class="highlight">Cyber Security</span><br />Students Club
+            </h1>
+
+            <p class="hero-tagline" id="typing-tagline">// SECURE · ETHICAL · VIGILANT</p>
+
+            <p class="hero-description">
+                Empowering the next generation of cybersecurity professionals through hands-on learning,
+                ethical hacking, CTF competitions, and real-world security challenges.
+            </p>
+
+            <!-- LAUNCH COUNTDOWN TIMER -->
+            <div class="countdown-wrap" id="countdown-wrap">
+                <div class="countdown-label">⚡ OFFICIAL LAUNCH IN</div>
+                <div class="countdown-timer" id="countdown-timer">
+                    <div class="countdown-unit">
+                        <span class="countdown-num" id="cd-days">00</span>
+                        <span class="countdown-unit-label">DAYS</span>
+                    </div>
+                    <div class="countdown-sep">:</div>
+                    <div class="countdown-unit">
+                        <span class="countdown-num" id="cd-hours">00</span>
+                        <span class="countdown-unit-label">HRS</span>
+                    </div>
+                    <div class="countdown-sep">:</div>
+                    <div class="countdown-unit">
+                        <span class="countdown-num" id="cd-mins">00</span>
+                        <span class="countdown-unit-label">MIN</span>
+                    </div>
+                    <div class="countdown-sep">:</div>
+                    <div class="countdown-unit">
+                        <span class="countdown-num" id="cd-secs">00</span>
+                        <span class="countdown-unit-label">SEC</span>
+                    </div>
+                </div>
+                <div class="countdown-date">📅 March 10, 2026</div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="register.html" class="btn btn-primary">🚀 Join the Club</a>
+                <a href="about.html" class="btn btn-secondary">Learn More</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="26">0</div>
+                    <div class="stat-label">FOUNDING MEMBERS</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number stat-zero">0</div>
+                    <div class="stat-label">WORKSHOPS</div>
+                    <div class="stat-sub">COMING SOON</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number stat-zero">0</div>
+                    <div class="stat-label">CTF WINS</div>
+                    <div class="stat-sub">COMING SOON</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number stat-launch">10</div>
+                    <div class="stat-label">MARCH 2026</div>
+                    <div class="stat-sub">LAUNCH DATE</div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">SCROLL DOWN</div>
+        </section>
+
+        <!-- == ABOUT INTRO == -->
+        <section class="section section-alt reveal" id="about-intro">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">ABOUT THE CLUB</span>
+                    <h2 class="section-title">What is <span class="text-accent">CSSC?</span></h2>
+                    <div class="divider"></div>
+                    <p class="section-desc">
+                        The Cyber Security Students Club is a student-driven technical organization dedicated to
+                        fostering
+                        cybersecurity awareness, ethical practices, and professional growth.
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="card reveal">
+                        <span class="card-icon">🔐</span>
+                        <h3 class="card-title">Ethical Hacking</h3>
+                        <p class="card-text">Learn penetration testing, vulnerability assessment, and responsible
+                            disclosure in a safe, legal environment.</p>
+                    </div>
+                    <div class="card reveal">
+                        <span class="card-icon">🧠</span>
+                        <h3 class="card-title">CTF Competitions</h3>
+                        <p class="card-text">Participate in Capture The Flag challenges locally and globally to sharpen
+                            your problem-solving skills.</p>
+                    </div>
+                    <div class="card reveal">
+                        <span class="card-icon">🌐</span>
+                        <h3 class="card-title">Network Security</h3>
+                        <p class="card-text">Dive deep into network protocols, firewalls, intrusion detection, and
+                            defense mechanisms.</p>
+                    </div>
+                    <div class="card reveal">
+                        <span class="card-icon">🛡️</span>
+                        <h3 class="card-title">Digital Defense</h3>
+                        <p class="card-text">Understand cyber threats, malware analysis, and build defensive skills to
+                            protect systems and data.</p>
+                    </div>
+                    <div class="card reveal">
+                        <span class="card-icon">📚</span>
+                        <h3 class="card-title">Certifications</h3>
+                        <p class="card-text">Get guidance on CEH, OSCP, CompTIA Security+, and other industry-standard
+                            certifications.</p>
+                    </div>
+                    <div class="card reveal">
+                        <span class="card-icon">🤝</span>
+                        <h3 class="card-title">Community</h3>
+                        <p class="card-text">Connect with like-minded peers, alumni, and industry professionals for
+                            mentorship and opportunities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- == VISION HIGHLIGHTS == -->
+        <section class="section reveal" id="vision">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">OUR MISSION</span>
+                    <h2 class="section-title">Vision <span class="text-accent">Highlights</span></h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="vision-grid">
+                    <div class="vision-item reveal">
+                        <div class="vision-icon">🎯</div>
+                        <div class="vision-content">
+                            <h3>Build Security Mindset</h3>
+                            <p>Foster a security-first approach to software development, system design, and digital
+                                behavior among students.</p>
+                        </div>
+                    </div>
+                    <div class="vision-item reveal">
+                        <div class="vision-icon">⚖️</div>
+                        <div class="vision-content">
+                            <h3>Promote Cyber Ethics</h3>
+                            <p>Champion responsible use of technology, ethical hacking principles, and digital
+                                citizenship in all activities.</p>
+                        </div>
+                    </div>
+                    <div class="vision-item reveal">
+                        <div class="vision-icon">🚀</div>
+                        <div class="vision-content">
+                            <h3>Industry Readiness</h3>
+                            <p>Bridge the gap between academia and industry by providing real-world cybersecurity
+                                experience and certifications.</p>
+                        </div>
+                    </div>
+                    <div class="vision-item reveal">
+                        <div class="vision-icon">🌍</div>
+                        <div class="vision-content">
+                            <h3>Global Collaboration</h3>
+                            <p>Engage with the global security community through open-source projects, conferences, and
+                                international CTFs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- == UPCOMING EVENTS == -->
+        <section class="section section-alt reveal" id="events">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">UPCOMING EVENTS</span>
+                    <h2 class="section-title">What's <span class="text-accent">Coming Up</span></h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="events-grid">
+                    <div class="event-card reveal"
+                        style="border-color:rgba(0,255,136,0.5); box-shadow:0 0 30px rgba(0,255,136,0.15);">
+                        <span class="event-badge badge-upcoming" style="background:rgba(0,255,136,0.2);">🎉 LAUNCH
+                            DAY</span>
+                        <div class="event-date">📅 MARCH 10, 2026</div>
+                        <h3 class="event-title">CSSC Official Club Launch</h3>
+                        <p class="event-desc">The official inauguration of the Cyber Security Students Club. Ceremony,
+                            team introductions, keynote session, and membership drive — a milestone day for digital
+                            security education at our university.</p>
+                    </div>
+                    <div class="event-card reveal">
+                        <span class="event-badge badge-workshop">WORKSHOP</span>
+                        <div class="event-date">📅 MARCH 28, 2026</div>
+                        <h3 class="event-title">Malware Analysis Lab</h3>
+                        <p class="event-desc">Introduction to static and dynamic malware analysis using REMnux and
+                            Cuckoo Sandbox in a controlled environment.</p>
+                    </div>
+                    <div class="event-card reveal">
+                        <span class="event-badge badge-competition">COMPETITION</span>
+                        <div class="event-date">📅 APRIL 10, 2026</div>
+                        <h3 class="event-title">Inter-College CTF Challenge</h3>
+                        <p class="event-desc">Annual Capture The Flag competition featuring cryptography, forensics,
+                            reverse engineering, and web exploitation challenges.</p>
+                    </div>
+                    <div class="event-card reveal">
+                        <span class="event-badge badge-upcoming">SEMINAR</span>
+                        <div class="event-date">📅 APRIL 22, 2026</div>
+                        <h3 class="event-title">Career in Cybersecurity</h3>
+                        <p class="event-desc">Industry expert panel discussion on career paths, certifications, and the
+                            current cybersecurity job market landscape.</p>
+                    </div>
+                    <div class="event-card reveal">
+                        <span class="event-badge badge-workshop">WORKSHOP</span>
+                        <div class="event-date">📅 MAY 5, 2026</div>
+                        <h3 class="event-title">Network Traffic Analysis</h3>
+                        <p class="event-desc">Learn Wireshark, tcpdump, and network forensics to identify anomalies and
+                            security incidents from packet captures.</p>
+                    </div>
+                    <div class="event-card reveal">
+                        <span class="event-badge badge-competition">HACKATHON</span>
+                        <div class="event-date">📅 MAY 20, 2026</div>
+                        <h3 class="event-title">CyberShield Hackathon 2026</h3>
+                        <p class="event-desc">48-hour cybersecurity hackathon with prizes, internship opportunities, and
+                            recognition from industry sponsors.</p>
+                    </div>
+                </div>
+
+                <div style="text-align:center; margin-top:2.5rem;">
+                    <a href="register.html" class="btn btn-primary">🚀 Join to Get Event Updates</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- == JOIN CTA == -->
+        <section class="section reveal" id="join-cta">
+            <div class="container">
+                <div class="cta-box">
+                    <div class="cta-icon">🛡️</div>
+                    <h2 class="cta-title">Ready to Defend the Digital World?</h2>
+                    <p class="cta-desc">Join CSSC today and be part of a passionate community of future cybersecurity
+                        professionals. No prior experience required — just curiosity and the will to learn.</p>
+                    <div class="hero-actions">
+                        <a href="register.html" class="btn btn-primary">📝 Register Now</a>
+                        <a href="team.html" class="btn btn-secondary">👥 Meet the Team</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- == FOOTER == -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="CSSC" class="footer-logo" onerror="this.style.display='none';" />
+                    <h3 class="footer-title">CSSC</h3>
+                    <p class="footer-tagline">Cyber Security Students Club</p>
+                    <p class="footer-about">A university technical club dedicated to cybersecurity education, ethical
+                        hacking, and digital responsibility.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About CSSC</a></li>
+                        <li><a href="ethics.html">Cyber Ethics</a></li>
+                        <li><a href="policies.html">Policies</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="register.html">Join Club</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="ethics.html#guidelines">Ethical Hacking Guide</a></li>
+                        <li><a href="ethics.html#laws">IT Act 2000</a></li>
+                        <li><a href="policies.html#terms">Terms & Conditions</a></li>
+                        <li><a href="policies.html#code-of-ethics">Code of Ethics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Connect With Us</h4>
+                    <p>📧 <a href="mailto:cssc@university.edu">cssc@university.edu</a></p>
+                    <p>🏛️ Department of Computer Science, University Campus</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="GitHub">GH</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">IN</a>
+                        <a href="#" class="social-link" aria-label="Twitter">TW</a>
+                        <a href="#" class="social-link" aria-label="Instagram">IG</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Cyber Security Students Club (CSSC) · All rights reserved</p>
+                <p class="footer-legal">This club operates under university guidelines and IT Act 2000. <a
+                        href="policies.html">View Policies</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

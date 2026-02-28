@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="About CSSC – Vision, Mission, Objectives, Faculty Mentor, and Leadership Team of the Cyber Security Students Club." />
+    <title>About CSSC – Cyber Security Students Club</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/logo.png" type="image/png" />
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-brand">
+            <img src="assets/logo.png" alt="CSSC Logo" class="nav-logo"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="nav-logo-placeholder" style="display:none;">CSSC</div>
+            <div>
+                <div class="nav-title">CSSC</div>
+                <div class="nav-subtitle">CYBER SECURITY STUDENTS CLUB</div>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="ethics.html">Cyber Ethics</a></li>
+            <li><a href="policies.html">Policies</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="register.html" class="nav-cta">Join Club</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </nav>
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html">🏠 Home</a>
+        <a href="about.html">👨‍💻 About CSSC</a>
+        <a href="ethics.html">⚖️ Cyber Ethics</a>
+        <a href="policies.html">📜 Policies</a>
+        <a href="team.html">👥 Team</a>
+        <a href="register.html">📝 Join Club</a>
+    </nav>
+
+    <main class="page-wrapper">
+
+        <div class="page-header">
+            <p class="page-breadcrumb"><a href="index.html">Home</a> / About</p>
+            <h1 class="page-header-title">About <span class="text-accent">CSSC</span></h1>
+            <p class="page-header-desc">Learn about our cybersecurity club — our story, values, mission, and the team
+                that drives us forward.</p>
+        </div>
+
+        <!-- == ABOUT TEXT == -->
+        <section class="section reveal">
+            <div class="container">
+                <div class="about-flex">
+                    <div class="about-content">
+                        <span class="section-tag">WHO WE ARE</span>
+                        <h2 class="section-title" style="text-align:left;">Cyber Security <span
+                                class="text-accent">Students Club</span></h2>
+                        <div class="divider" style="margin-left:0;"></div>
+                        <p
+                            style="color:var(--text-secondary); font-size:1.05rem; line-height:1.9; margin-bottom:1.5rem;">
+                            The Cyber Security Students Club (CSSC) is a dynamic, student-led technical organization
+                            being established under the Department of Computer Science. Founded by passionate students
+                            who recognize the growing importance of cybersecurity in today's digital world, CSSC is
+                            all set to be launched as a thriving hub of learning, innovation, and community.
+                        </p>
+                        <p
+                            style="color:var(--text-secondary); font-size:1.05rem; line-height:1.9; margin-bottom:1.5rem;">
+                            We believe that cybersecurity is not merely a technical skill — it is a responsibility.
+                            Through workshops,
+                            seminars, CTF competitions, and hands-on labs, we equip our members with both the technical
+                            expertise and
+                            the ethical framework needed to be responsible digital citizens and security professionals.
+                        </p>
+                        <p style="color:var(--text-secondary); font-size:1.05rem; line-height:1.9;">
+                            Our members come from diverse backgrounds — Computer Science, Electronics, IT, and more —
+                            united by a
+                            common passion for security. We welcome everyone, from absolute beginners to advanced
+                            practitioners.
+                        </p>
+                    </div>
+                    <div class="about-visual">
+                        <div class="terminal-box">
+                            <div class="terminal-header">
+                                <span class="terminal-dot red"></span>
+                                <span class="terminal-dot yellow"></span>
+                                <span class="terminal-dot green"></span>
+                                <span class="terminal-title">cssc_info.sh</span>
+                            </div>
+                            <div class="terminal-body">
+                                <p><span class="t-prompt">$ </span><span class="t-cmd">cat club_info.txt</span></p>
+                                <p class="t-output">Name : Cyber Security Students Club</p>
+                                <p class="t-output">Code : CSSC</p>
+                                <p class="t-output">Launch : <span style="color:var(--neon-green)">10 March 2026</span>
+                                </p>
+                                <p class="t-output">Members : 26 (Founding Team)</p>
+                                <p class="t-output">Dept : Computer Science</p>
+                                <p class="t-output">Status : <span style="color:var(--neon-blue)">LAUNCHING SOON
+                                        ⏳</span></p>
+                                <br />
+                                <p><span class="t-prompt">$ </span><span class="t-cmd">./get_mission.sh</span></p>
+                                <p class="t-output">Loading mission parameters...</p>
+                                <p class="t-output" style="color:var(--neon-green)">✓ Educate · Protect · Innovate</p>
+                                <br />
+                                <p><span class="t-prompt">$ </span><span class="t-cursor">█</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- == VISION & MISSION == -->
+        <section class="section section-alt reveal">
+            <div class="container">
+                <div class="vm-grid">
+                    <div class="vm-card vision-card">
+                        <div class="vm-icon">🔭</div>
+                        <h2>Our Vision</h2>
+                        <p>
+                            To be the leading university cybersecurity club that produces ethical, skilled, and
+                            responsible
+                            security professionals who contribute to a safer digital ecosystem — locally and globally.
+                            We envision a future where every student understands digital security as a fundamental life
+                            skill.
+                        </p>
+                    </div>
+                    <div class="vm-card mission-card">
+                        <div class="vm-icon">🎯</div>
+                        <h2>Our Mission</h2>
+                        <p>
+                            To provide a collaborative platform for students to learn, practice, and apply cybersecurity
+                            skills
+                            through ethical means. We educate, train, and empower the next generation of cyber defenders
+                            through
+                            hands-on experience, mentorship, and community engagement.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- == CLUB OBJECTIVES == -->
+        <section class="section reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">OBJECTIVES</span>
+                    <h2 class="section-title">Club <span class="text-accent">Objectives</span></h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="objectives-list">
+                    <div class="objective-item reveal">
+                        <div class="obj-number">01</div>
+                        <div class="obj-content">
+                            <h3>Cybersecurity Education</h3>
+                            <p>Conduct regular workshops, seminars, and training sessions covering core cybersecurity
+                                topics including network security, ethical hacking, cryptography, and digital forensics.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="objective-item reveal">
+                        <div class="obj-number">02</div>
+                        <div class="obj-content">
+                            <h3>Ethical Practice Promotion</h3>
+                            <p>Instill a strong ethical foundation and responsible disclosure culture among all members,
+                                ensuring that skills are used constructively and legally.</p>
+                        </div>
+                    </div>
+                    <div class="objective-item reveal">
+                        <div class="obj-number">03</div>
+                        <div class="obj-content">
+                            <h3>Competitive Excellence</h3>
+                            <p>Represent the university in national and international CTF competitions, hackathons, and
+                                cybersecurity challenges to test and showcase member skills.</p>
+                        </div>
+                    </div>
+                    <div class="objective-item reveal">
+                        <div class="obj-number">04</div>
+                        <div class="obj-content">
+                            <h3>Industry Collaboration</h3>
+                            <p>Build partnerships with cybersecurity companies, CERT-In, and government agencies to
+                                provide real-world exposure, internships, and career opportunities to members.</p>
+                        </div>
+                    </div>
+                    <div class="objective-item reveal">
+                        <div class="obj-number">05</div>
+                        <div class="obj-content">
+                            <h3>Community Awareness</h3>
+                            <p>Extend cybersecurity awareness beyond the campus by conducting public awareness
+                                campaigns, school outreach programs, and community education initiatives.</p>
+                        </div>
+                    </div>
+                    <div class="objective-item reveal">
+                        <div class="obj-number">06</div>
+                        <div class="obj-content">
+                            <h3>Research & Innovation</h3>
+                            <p>Encourage and support student research in emerging cybersecurity fields including AI
+                                security, IoT vulnerabilities, blockchain security, and zero-trust architectures.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- == FACULTY MENTOR == -->
+        <section class="section section-alt reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">FACULTY MENTOR</span>
+                    <h2 class="section-title">Academic <span class="text-accent">Guidance</span></h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="mentor-card-wrap">
+                    <div class="mentor-card" style="gap:1.5rem;">
+
+                        <div style="display:flex;flex-direction:column;gap:1.5rem;flex:1;">
+
+                            <!-- Mentor 1 -->
+                            <div style="display:flex;gap:1.5rem;align-items:flex-start;">
+                                <div class="mentor-avatar" style="width:72px;height:72px;font-size:1.3rem;">VM</div>
+                                <div class="mentor-info">
+                                    <div class="mentor-tag">Faculty Mentor</div>
+                                    <h3 class="mentor-name">Ms. Vaidehi Mantri</h3>
+                                    <p class="mentor-title">Faculty Mentor, Dept. of Computer Science</p>
+                                    <p class="mentor-bio">
+                                        Experienced faculty with expertise in information security and computer science.
+                                        Guides CSSC in maintaining academic integrity, ethical standards, and technical
+                                        excellence across all club activities.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Mentor 2 -->
+                            <div
+                                style="display:flex;gap:1.5rem;align-items:flex-start; padding-top:1.5rem; border-top:1px solid var(--border-color);">
+                                <div class="mentor-avatar" style="width:72px;height:72px;font-size:1.3rem;">MM</div>
+                                <div class="mentor-info">
+                                    <div class="mentor-tag">Faculty Mentor</div>
+                                    <h3 class="mentor-name">Ms. Monali Maid</h3>
+                                    <p class="mentor-title">Faculty Mentor, Dept. of Computer Science</p>
+                                    <p class="mentor-bio">
+                                        Dedicated faculty supporting CSSC's research, events, and student development
+                                        initiatives in cybersecurity education and awareness programs.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- == JOIN CTA == -->
+        <section class="section reveal">
+            <div class="container">
+                <div class="cta-box">
+                    <div class="cta-icon">🚀</div>
+                    <h2 class="cta-title">Be Part of Something Bigger</h2>
+                    <p class="cta-desc">Join 26 founding members who are already committed to learning, building,
+                        and securing the digital future. Be part of CSSC from Day 1 — launching <strong
+                            style="color:var(--neon-green);">10 March 2026</strong>.</p>
+                    <div class="hero-actions">
+                        <a href="register.html" class="btn btn-primary">📝 Register Now</a>
+                        <a href="team.html" class="btn btn-secondary">👥 Meet the Team</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="CSSC" class="footer-logo" onerror="this.style.display='none';" />
+                    <h3 class="footer-title">CSSC</h3>
+                    <p class="footer-tagline">Cyber Security Students Club</p>
+                    <p class="footer-about">A university technical club dedicated to cybersecurity education, ethical
+                        hacking, and digital responsibility.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About CSSC</a></li>
+                        <li><a href="ethics.html">Cyber Ethics</a></li>
+                        <li><a href="policies.html">Policies</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="register.html">Join Club</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="ethics.html">Ethical Hacking Guide</a></li>
+                        <li><a href="ethics.html#laws">IT Act 2000</a></li>
+                        <li><a href="policies.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Connect With Us</h4>
+                    <p>📧 <a href="mailto:cssc@university.edu">cssc@university.edu</a></p>
+                    <p>🏛️ Department of Computer Science, University Campus</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">GH</a>
+                        <a href="#" class="social-link">IN</a>
+                        <a href="#" class="social-link">TW</a>
+                        <a href="#" class="social-link">IG</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Cyber Security Students Club (CSSC) · All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Cyber Ethics & Laws – CSSC guidelines on responsible disclosure, IT Act 2000, ethical hacking, and digital responsibility." />
+    <title>Cyber Ethics & Laws – CSSC</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/logo.png" type="image/png" />
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-brand">
+            <img src="assets/logo.png" alt="CSSC Logo" class="nav-logo"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="nav-logo-placeholder" style="display:none;">CSSC</div>
+            <div>
+                <div class="nav-title">CSSC</div>
+                <div class="nav-subtitle">CYBER SECURITY STUDENTS CLUB</div>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="ethics.html" class="active">Cyber Ethics</a></li>
+            <li><a href="policies.html">Policies</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="register.html" class="nav-cta">Join Club</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </nav>
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html">🏠 Home</a>
+        <a href="about.html">👨‍💻 About CSSC</a>
+        <a href="ethics.html">⚖️ Cyber Ethics</a>
+        <a href="policies.html">📜 Policies</a>
+        <a href="team.html">👥 Team</a>
+        <a href="register.html">📝 Join Club</a>
+    </nav>
+
+    <main class="page-wrapper">
+
+        <div class="page-header">
+            <p class="page-breadcrumb"><a href="index.html">Home</a> / Cyber Ethics & Laws</p>
+            <h1 class="page-header-title">Cyber Ethics <span class="text-accent">& Laws</span></h1>
+            <p class="page-header-desc">Understanding the ethical boundaries, legal frameworks, and responsible
+                practices in cybersecurity.</p>
+        </div>
+
+        <!-- == CYBER ETHICS == -->
+        <section class="section reveal" id="ethics">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">CYBER ETHICS</span>
+                    <h2 class="section-title">The Ethical <span class="text-accent">Framework</span></h2>
+                    <div class="divider"></div>
+                    <p class="section-desc">Ethics in cybersecurity defines the boundaries between legitimate security
+                        research and criminal activity.</p>
+                </div>
+
+                <div class="ethics-grid">
+                    <div class="ethics-card reveal">
+                        <div class="ethics-icon allow">✅</div>
+                        <h3>Permitted Activities</h3>
+                        <ul class="ethics-list">
+                            <li>Penetration testing with written authorization</li>
+                            <li>Security research on owned/controlled systems</li>
+                            <li>Participation in authorized bug bounty programs</li>
+                            <li>CTF competitions and sandboxed labs</li>
+                            <li>Vulnerability research for academic purposes</li>
+                            <li>Educating others about security awareness</li>
+                        </ul>
+                    </div>
+                    <div class="ethics-card reveal">
+                        <div class="ethics-icon deny">❌</div>
+                        <h3>Prohibited Activities</h3>
+                        <ul class="ethics-list deny-list">
+                            <li>Unauthorized access to any system or network</li>
+                            <li>Scanning or probing systems without permission</li>
+                            <li>Deploying malware or unauthorized tools</li>
+                            <li>Data theft, eavesdropping, or interception</li>
+                            <li>Sharing exploits for malicious purposes</li>
+                            <li>Using club resources for illegal activities</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ethics-principles reveal">
+                    <h3 style="font-family:var(--font-heading); color:var(--neon-green); margin-bottom:1.5rem;">Core
+                        Ethical Principles</h3>
+                    <div class="principles-grid">
+                        <div class="principle-item">
+                            <span class="principle-num">01</span>
+                            <div>
+                                <strong>Confidentiality</strong>
+                                <p>Never disclose sensitive information obtained during security assessments without
+                                    authorization.</p>
+                            </div>
+                        </div>
+                        <div class="principle-item">
+                            <span class="principle-num">02</span>
+                            <div>
+                                <strong>Integrity</strong>
+                                <p>Do not alter, damage, or destroy data or systems unless specifically required by the
+                                    authorized scope.</p>
+                            </div>
+                        </div>
+                        <div class="principle-item">
+                            <span class="principle-num">03</span>
+                            <div>
+                                <strong>Authorization</strong>
+                                <p>Always obtain written permission before testing any system, network, or application.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="principle-item">
+                            <span class="principle-num">04</span>
+                            <div>
+                                <strong>Reporting</strong>
+                                <p>Report all discovered vulnerabilities to the appropriate authority promptly and
+                                    responsibly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- == RESPONSIBLE DISCLOSURE == -->
+        <section class="section section-alt reveal" id="disclosure">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">RESPONSIBLE DISCLOSURE</span>
+                    <h2 class="section-title">Vulnerability <span class="text-accent">Disclosure Policy</span></h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="disclosure-timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-icon">🔍</div>
+                        <div class="timeline-content">
+                            <h3>Step 1: Discovery</h3>
+                            <p>Document the vulnerability thoroughly including affected systems, reproduction steps, and
+                                potential impact. Never exploit beyond what is necessary to confirm the issue.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-icon">📧</div>
+                        <div class="timeline-content">
+                            <h3>Step 2: Private Notification</h3>
+                            <p>Contact the organization's security team privately via their security email, bug bounty
+                                platform, or responsible disclosure policy page. Do NOT post on public forums.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-icon">⏰</div>
+                        <div class="timeline-content">
+                            <h3>Step 3: Wait Period (90 Days)</h3>
+                            <p>Allow the organization 90 days to patch the vulnerability before any public disclosure.
+                                Maintain strict confidentiality during this period.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-icon">🤝</div>
+                        <div class="timeline-content">
+                            <h3>Step 4: Coordinate Disclosure</h3>
+                            <p>Work with the organization to coordinate a joint disclosure once the fix is deployed.
+                                Credit may be given to the researcher in the vendor's security advisory.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-icon">📢</div>
+                        <div class="timeline-content">
+                            <h3>Step 5: Public Disclosure</h3>
+                            <p>After the patch is released, you may publish a technical writeup that educates the
+                                community without enabling exploitation of unpatched systems.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- == CYBER LAWS INDIA == -->
+        <section class="section reveal" id="laws">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">CYBER LAW</span>
+                    <h2 class="section-title">India's IT Act <span class="text-accent">2000</span></h2>
+                    <div class="divider"></div>
+                    <p class="section-desc">Key provisions of the Information Technology Act, 2000 that every
+                        cybersecurity practitioner must know.</p>
+                </div>
+
+                <div class="law-cards">
+                    <div class="law-card reveal">
+                        <div class="law-section">§ Section 43</div>
+                        <h3>Unauthorized Access & Damage</h3>
+                        <p>Penalizes unauthorized access, downloading data, introducing viruses, or disrupting computer
+                            systems. Civil liability up to ₹1 crore for damages.</p>
+                        <div class="law-penalty">⚠️ Civil liability up to ₹1 Crore</div>
+                    </div>
+                    <div class="law-card reveal">
+                        <div class="law-section">§ Section 66</div>
+                        <h3>Computer Related Offences</h3>
+                        <p>Criminal version of Section 43. Dishonestly or fraudulently performing acts described in
+                            Section 43 is punishable with imprisonment and/or fine.</p>
+                        <div class="law-penalty">⚠️ Up to 3 years imprisonment + ₹5 Lakh fine</div>
+                    </div>
+                    <div class="law-card reveal">
+                        <div class="law-section">§ Section 66C</div>
+                        <h3>Identity Theft</h3>
+                        <p>Fraudulent use of electronic signature, password, or unique identification feature of another
+                            person for unauthorized access or benefit.</p>
+                        <div class="law-penalty">⚠️ Up to 3 years imprisonment + ₹1 Lakh fine</div>
+                    </div>
+                    <div class="law-card reveal">
+                        <div class="law-section">§ Section 66E</div>
+                        <h3>Privacy Violation</h3>
+                        <p>Intentionally capturing, publishing, or transmitting private images of another person without
+                            consent, violating their privacy.</p>
+                        <div class="law-penalty">⚠️ Up to 3 years imprisonment + ₹2 Lakh fine</div>
+                    </div>
+                    <div class="law-card reveal">
+                        <div class="law-section">§ Section 67</div>
+                        <h3>Obscene Content</h3>
+                        <p>Publishing or transmitting obscene material in electronic form is a criminal offence with
+                            severe penalties.</p>
+                        <div class="law-penalty">⚠️ Up to 3 years imprisonment + ₹5 Lakh fine</div>
+                    </div>
+                    <div class="law-card reveal">
+                        <div class="law-section">§ Section 70</div>
+                        <h3>Protected Systems</h3>
+                        <p>Unauthorized access or attempts to access computer resources designated as 'protected
+                            systems' by the government is a severe offence.</p>
+                        <div class="law-penalty">⚠️ Up to 10 years imprisonment</div>
+                    </div>
+                </div>
+
+                <div class="law-notice reveal">
+                    <div class="notice-icon">⚖️</div>
+                    <div>
+                        <strong>Important Legal Notice</strong>
+                        <p>This is an educational summary only. For legal advice on specific matters, consult a
+                            qualified cyber law attorney. CSSC does not provide legal counsel. Always ensure your
+                            security activities comply with applicable laws.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- == ETHICAL HACKING GUIDELINES == -->
+        <section class="section section-alt reveal" id="guidelines">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">ETHICAL HACKING</span>
+                    <h2 class="section-title">Hacker's <span class="text-accent">Code of Conduct</span></h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="guidelines-grid">
+                    <div class="guideline-card reveal">
+                        <span class="guide-icon">📋</span>
+                        <h3>Get Written Permission</h3>
+                        <p>Always obtain explicit written authorization before testing any system. Verbal permission is
+                            insufficient. Keep a signed authorization document at all times.</p>
+                    </div>
+                    <div class="guideline-card reveal">
+                        <span class="guide-icon">🎯</span>
+                        <h3>Define Clear Scope</h3>
+                        <p>Establish and strictly adhere to the defined scope of testing. Do not test systems, networks,
+                            or features not explicitly included in the authorization.</p>
+                    </div>
+                    <div class="guideline-card reveal">
+                        <span class="guide-icon">📝</span>
+                        <h3>Document Everything</h3>
+                        <p>Keep detailed records of all activities, findings, timestamps, and tools used. Proper
+                            documentation is essential for reporting and legal protection.</p>
+                    </div>
+                    <div class="guideline-card reveal">
+                        <span class="guide-icon">🔒</span>
+                        <h3>Protect Sensitive Data</h3>
+                        <p>Handle any data encountered during testing with extreme care. Immediately report and secure
+                            any sensitive data discovered; never retain it beyond what's needed.</p>
+                    </div>
+                    <div class="guideline-card reveal">
+                        <span class="guide-icon">🚨</span>
+                        <h3>Report Critical Findings Immediately</h3>
+                        <p>If you discover a critical vulnerability that poses immediate risk, notify the client
+                            immediately before completing the full assessment.</p>
+                    </div>
+                    <div class="guideline-card reveal">
+                        <span class="guide-icon">🛑</span>
+                        <h3>Stop When Instructed</h3>
+                        <p>Cease all testing activities immediately when requested by the system owner, even if work is
+                            incomplete. Always respect the client's decision to terminate testing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- == DIGITAL RESPONSIBILITY == -->
+        <section class="section reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">DIGITAL RESPONSIBILITY</span>
+                    <h2 class="section-title">Being a <span class="text-accent">Responsible</span> Netizen</h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="responsibility-grid">
+                    <div class="resp-item reveal">
+                        <span>🔑</span>
+                        <div>
+                            <h3>Use Strong Authentication</h3>
+                            <p>Enable MFA/2FA everywhere possible. Use password managers and unique, complex passwords
+                                for every account.</p>
+                        </div>
+                    </div>
+                    <div class="resp-item reveal">
+                        <span>🔄</span>
+                        <div>
+                            <h3>Keep Systems Updated</h3>
+                            <p>Regularly update operating systems, applications, and firmware. Unpatched systems are the
+                                primary vector for cyberattacks.</p>
+                        </div>
+                    </div>
+                    <div class="resp-item reveal">
+                        <span>🧠</span>
+                        <div>
+                            <h3>Think Before You Click</h3>
+                            <p>Be skeptical of unsolicited emails, links, and downloads. Phishing remains the most
+                                common attack vector worldwide.</p>
+                        </div>
+                    </div>
+                    <div class="resp-item reveal">
+                        <span>🌐</span>
+                        <div>
+                            <h3>Use Secure Networks</h3>
+                            <p>Avoid public Wi-Fi for sensitive activities. Use VPN when necessary. Understand the risks
+                                of unencrypted connections.</p>
+                        </div>
+                    </div>
+                    <div class="resp-item reveal">
+                        <span>💾</span>
+                        <div>
+                            <h3>Backup Your Data</h3>
+                            <p>Follow the 3-2-1 backup rule: 3 copies, 2 different media, 1 offsite. Protect against
+                                ransomware and hardware failures.</p>
+                        </div>
+                    </div>
+                    <div class="resp-item reveal">
+                        <span>🗣️</span>
+                        <div>
+                            <h3>Spread Awareness</h3>
+                            <p>Share cybersecurity knowledge with friends, family, and colleagues. A secure community
+                                starts with educated individuals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="CSSC" class="footer-logo" onerror="this.style.display='none';" />
+                    <h3 class="footer-title">CSSC</h3>
+                    <p class="footer-tagline">Cyber Security Students Club</p>
+                    <p class="footer-about">A university technical club dedicated to cybersecurity education, ethical
+                        hacking, and digital responsibility.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About CSSC</a></li>
+                        <li><a href="ethics.html">Cyber Ethics</a></li>
+                        <li><a href="policies.html">Policies</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="register.html">Join Club</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Ethics Sections</h4>
+                    <ul>
+                        <li><a href="#ethics">Cyber Ethics</a></li>
+                        <li><a href="#disclosure">Responsible Disclosure</a></li>
+                        <li><a href="#laws">IT Act 2000</a></li>
+                        <li><a href="#guidelines">Ethical Hacking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Connect With Us</h4>
+                    <p>📧 <a href="mailto:cssc@university.edu">cssc@university.edu</a></p>
+                    <p>🏛️ Department of Computer Science, University Campus</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">GH</a>
+                        <a href="#" class="social-link">IN</a>
+                        <a href="#" class="social-link">TW</a>
+                        <a href="#" class="social-link">IG</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Cyber Security Students Club (CSSC) · All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

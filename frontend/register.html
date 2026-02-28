@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Join CSSC – Register as a member of the Cyber Security Students Club and be part of our growing cybersecurity community." />
+    <title>Join CSSC – Member Registration</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/logo.png" type="image/png" />
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-brand">
+            <img src="assets/logo.png" alt="CSSC Logo" class="nav-logo"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="nav-logo-placeholder" style="display:none;">CSSC</div>
+            <div>
+                <div class="nav-title">CSSC</div>
+                <div class="nav-subtitle">CYBER SECURITY STUDENTS CLUB</div>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="ethics.html">Cyber Ethics</a></li>
+            <li><a href="policies.html">Policies</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="register.html" class="nav-cta active">Join Club</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </nav>
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html">🏠 Home</a>
+        <a href="about.html">👨‍💻 About CSSC</a>
+        <a href="ethics.html">⚖️ Cyber Ethics</a>
+        <a href="policies.html">📜 Policies</a>
+        <a href="team.html">👥 Team</a>
+        <a href="register.html">📝 Join Club</a>
+    </nav>
+
+    <main class="page-wrapper">
+
+        <div class="page-header">
+            <p class="page-breadcrumb"><a href="index.html">Home</a> / Join Club</p>
+            <h1 class="page-header-title">Join <span class="text-accent">CSSC</span></h1>
+            <p class="page-header-desc">Fill in the registration form below to become an official member of the Cyber
+                Security Students Club.</p>
+        </div>
+
+        <section class="section">
+            <div class="container">
+                <div class="register-layout">
+
+                    <!-- BENEFITS PANEL -->
+                    <div class="register-benefits reveal">
+                        <h3 class="benefits-title">Why Join CSSC?</h3>
+                        <ul class="benefits-list">
+                            <li>
+                                <span class="benefit-icon">🔬</span>
+                                <div>
+                                    <strong>Hands-on Labs</strong>
+                                    <p>Access to dedicated cybersecurity lab with real-world tools and environments.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="benefit-icon">🏆</span>
+                                <div>
+                                    <strong>CTF Competitions</strong>
+                                    <p>Represent the university in national and international CTF competitions.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="benefit-icon">📜</span>
+                                <div>
+                                    <strong>Certification Support</strong>
+                                    <p>Mentorship and resources for CEH, OSCP, and Security+ certifications.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="benefit-icon">🤝</span>
+                                <div>
+                                    <strong>Industry Network</strong>
+                                    <p>Connect with cybersecurity professionals, companies, and alumni.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="benefit-icon">💼</span>
+                                <div>
+                                    <strong>Internship Opportunities</strong>
+                                    <p>Exclusive internship and job referrals through club partnerships.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="benefit-icon">🌐</span>
+                                <div>
+                                    <strong>Open Source Projects</strong>
+                                    <p>Contribute to real security tools and build your GitHub portfolio.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- REGISTRATION FORM -->
+                    <div class="register-form-wrap reveal">
+                        <div class="form-card">
+                            <div class="form-header">
+                                <div class="form-header-icon">🛡️</div>
+                                <h2>Member Registration</h2>
+                                <p>All fields marked with <span style="color:var(--accent-red)">*</span> are required.
+                                </p>
+                            </div>
+
+                            <!-- Status Messages -->
+                            <div id="form-success" class="form-message success" style="display:none;">
+                                <span>✅</span>
+                                <div>
+                                    <strong>Registration Successful!</strong>
+                                    <p>Welcome to CSSC! You'll receive a confirmation email shortly.</p>
+                                </div>
+                            </div>
+                            <div id="form-error" class="form-message error" style="display:none;">
+                                <span>❌</span>
+                                <div>
+                                    <strong>Registration Failed</strong>
+                                    <p id="error-msg">Please try again or contact us directly.</p>
+                                </div>
+                            </div>
+
+                            <form id="register-form" novalidate>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="full-name">Full Name <span class="required">*</span></label>
+                                        <input type="text" id="full-name" name="full_name"
+                                            placeholder="e.g. Arjun Kumar" autocomplete="name" maxlength="100"
+                                            required />
+                                        <span class="field-msg" id="name-msg"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-row two-col">
+                                    <div class="form-group">
+                                        <label for="department">Department <span class="required">*</span></label>
+                                        <select id="department" name="department" required>
+                                            <option value="">-- Select Department --</option>
+                                            <option value="CSE">Computer Science & Engineering (CSE)</option>
+                                            <option value="IT">Information Technology (IT)</option>
+                                            <option value="ECE">Electronics & Communication (ECE)</option>
+                                            <option value="EEE">Electrical & Electronics (EEE)</option>
+                                            <option value="MECH">Mechanical Engineering</option>
+                                            <option value="CIVIL">Civil Engineering</option>
+                                            <option value="MCA">Master of Computer Applications (MCA)</option>
+                                            <option value="MBA">Master of Business Administration (MBA)</option>
+                                            <option value="OTHER">Other</option>
+                                        </select>
+                                        <span class="field-msg" id="dept-msg"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="year">Academic Year <span class="required">*</span></label>
+                                        <select id="year" name="year" required>
+                                            <option value="">-- Select Year --</option>
+                                            <option value="1st Year">1st Year</option>
+                                            <option value="2nd Year">2nd Year</option>
+                                            <option value="3rd Year">3rd Year</option>
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="PG 1st Year">PG 1st Year</option>
+                                            <option value="PG 2nd Year">PG 2nd Year</option>
+                                        </select>
+                                        <span class="field-msg" id="year-msg"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-row two-col">
+                                    <div class="form-group">
+                                        <label for="email">Email Address <span class="required">*</span></label>
+                                        <input type="email" id="email" name="email"
+                                            placeholder="your.name@university.edu" autocomplete="email" maxlength="150"
+                                            required />
+                                        <span class="field-msg" id="email-msg"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number <span class="required">*</span></label>
+                                        <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX"
+                                            autocomplete="tel" maxlength="15" pattern="[+]?[0-9\s\-]{10,15}" required />
+                                        <span class="field-msg" id="phone-msg"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="skills">Technical Skills / Tools Known</label>
+                                    <input type="text" id="skills" name="skills"
+                                        placeholder="e.g. Python, Kali Linux, Nmap, Wireshark, CTFs, Burp Suite..."
+                                        maxlength="300" />
+                                    <span class="field-hint">Separate skills with commas. Beginners welcome — you can
+                                        write "None yet".</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="interest">Area of Interest <span class="required">*</span></label>
+                                    <select id="interest" name="interest" required>
+                                        <option value="">-- Select Interest Area --</option>
+                                        <option value="Web Security">Web Application Security</option>
+                                        <option value="Network Security">Network Security</option>
+                                        <option value="CTF">CTF Competitions</option>
+                                        <option value="Digital Forensics">Digital Forensics</option>
+                                        <option value="Malware Analysis">Malware Analysis & Reverse Engineering</option>
+                                        <option value="Cloud Security">Cloud Security</option>
+                                        <option value="IoT Security">IoT Security</option>
+                                        <option value="Cryptography">Cryptography</option>
+                                        <option value="Bug Bounty">Bug Bounty Hunting</option>
+                                        <option value="General">General Cybersecurity Awareness</option>
+                                        <option value="Not Sure">Not Sure Yet</option>
+                                    </select>
+                                    <span class="field-msg" id="interest-msg"></span>
+                                </div>
+
+                                <!-- CHECKBOX AGREEMENTS -->
+                                <div class="form-agreements">
+                                    <label class="checkbox-label" id="oath-label">
+                                        <input type="checkbox" id="accept-oath" name="accept_oath" required />
+                                        <span class="checkbox-custom"></span>
+                                        <span>I accept the <strong>CSSC Club Oath</strong> and pledge to use
+                                            cybersecurity skills only for ethical and legal purposes. <a
+                                                href="policies.html#member-declaration" target="_blank">Read Oath
+                                                →</a></span>
+                                    </label>
+
+                                    <label class="checkbox-label" id="terms-label">
+                                        <input type="checkbox" id="accept-terms" name="accept_terms" required />
+                                        <span class="checkbox-custom"></span>
+                                        <span>I have read and agree to the <strong>Terms & Conditions</strong>,
+                                            <strong>Code of Ethics</strong>, and <strong>Privacy Policy</strong> of
+                                            CSSC. <a href="policies.html" target="_blank">Read Policies →</a></span>
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary submit-btn" id="submit-btn">
+                                    <span id="btn-text">🚀 Submit Registration</span>
+                                    <span id="btn-loader" style="display:none;">⏳ Submitting...</span>
+                                </button>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="CSSC" class="footer-logo" onerror="this.style.display='none';" />
+                    <h3 class="footer-title">CSSC</h3>
+                    <p class="footer-tagline">Cyber Security Students Club</p>
+                    <p class="footer-about">A university technical club dedicated to cybersecurity education, ethical
+                        hacking, and digital responsibility.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About CSSC</a></li>
+                        <li><a href="ethics.html">Cyber Ethics</a></li>
+                        <li><a href="policies.html">Policies</a></li>
+                        <li><a href="team.html">Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Policies</h4>
+                    <ul>
+                        <li><a href="policies.html#terms">Terms</a></li>
+                        <li><a href="policies.html#code-of-ethics">Code of Ethics</a></li>
+                        <li><a href="policies.html#member-declaration">Member Declaration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Connect With Us</h4>
+                    <p>📧 <a href="mailto:cssc@university.edu">cssc@university.edu</a></p>
+                    <p>🏛️ Department of Computer Science, University Campus</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">GH</a>
+                        <a href="#" class="social-link">IN</a>
+                        <a href="#" class="social-link">TW</a>
+                        <a href="#" class="social-link">IG</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Cyber Security Students Club (CSSC) · All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

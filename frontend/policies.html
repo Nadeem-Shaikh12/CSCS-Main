@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="CSSC Policies – Terms & Conditions, Member Declaration, Code of Ethics, Social Media Policy, and Legal Compliance." />
+    <title>Policies & Legal Compliance – CSSC</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/logo.png" type="image/png" />
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-brand">
+            <img src="assets/logo.png" alt="CSSC Logo" class="nav-logo"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="nav-logo-placeholder" style="display:none;">CSSC</div>
+            <div>
+                <div class="nav-title">CSSC</div>
+                <div class="nav-subtitle">CYBER SECURITY STUDENTS CLUB</div>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="ethics.html">Cyber Ethics</a></li>
+            <li><a href="policies.html" class="active">Policies</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="register.html" class="nav-cta">Join Club</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </nav>
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html">🏠 Home</a>
+        <a href="about.html">👨‍💻 About CSSC</a>
+        <a href="ethics.html">⚖️ Cyber Ethics</a>
+        <a href="policies.html">📜 Policies</a>
+        <a href="team.html">👥 Team</a>
+        <a href="register.html">📝 Join Club</a>
+    </nav>
+
+    <main class="page-wrapper">
+
+        <div class="page-header">
+            <p class="page-breadcrumb"><a href="index.html">Home</a> / Policies</p>
+            <h1 class="page-header-title">Policies & <span class="text-accent">Legal Compliance</span></h1>
+            <p class="page-header-desc">All club policies governing membership, conduct, legal obligations, and digital
+                responsibility.</p>
+        </div>
+
+        <section class="section">
+            <div class="container">
+
+                <div class="policy-intro reveal">
+                    <div class="policy-intro-icon">📜</div>
+                    <p>These policies apply to all CSSC members, participants, and anyone engaging with club resources
+                        or events.
+                        By joining CSSC, you agree to abide by all policies listed below. Please read each section
+                        carefully.</p>
+                    <p
+                        style="margin-top:0.75rem; font-family:var(--font-mono); font-size:0.85rem; color:var(--neon-green);">
+                        Last Updated: February 2026 &nbsp;|&nbsp; Version 2.0
+                    </p>
+                </div>
+
+                <!-- ACCORDION -->
+                <div class="accordion" id="policies-accordion">
+
+                    <!-- 1. Terms & Conditions -->
+                    <div class="accordion-item" id="terms">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span><span class="accordion-icon">📋</span> Terms & Conditions</span>
+                            <span class="accordion-arrow">▼</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <h4>1.1 Membership Terms</h4>
+                                <p>Membership in CSSC is open to all currently enrolled students of the university.
+                                    Membership is granted upon successful registration, agreement to these terms, and
+                                    payment of any applicable membership fees.</p>
+
+                                <h4>1.2 Use of Club Resources</h4>
+                                <p>Club resources including lab equipment, software licenses, network access, and
+                                    digital tools are provided exclusively for educational, research, and
+                                    club-authorized activities. Any misuse of resources may result in immediate
+                                    membership suspension.</p>
+
+                                <h4>1.3 Participation Requirements</h4>
+                                <p>Members are expected to maintain active participation in club activities. Inactive
+                                    members (no participation for 3+ months without prior notice) may be moved to
+                                    associate membership status. Members must attend at least 60% of club events per
+                                    semester.</p>
+
+                                <h4>1.4 Intellectual Property</h4>
+                                <p>Content, tools, or research developed during CSSC activities may be published under
+                                    open-source licenses as determined by the club leadership. Members retain credit for
+                                    their contributions.</p>
+
+                                <h4>1.5 Termination of Membership</h4>
+                                <p>CSSC reserves the right to suspend or terminate membership for violation of any
+                                    policies, unethical behavior, or illegal activities. Appeals may be made to the
+                                    faculty mentor within 7 days of suspension.</p>
+
+                                <h4>1.6 Amendments</h4>
+                                <p>These terms may be updated periodically. Members will be notified of significant
+                                    changes via official communication channels. Continued membership after notification
+                                    constitutes acceptance of amended terms.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Member Declaration -->
+                    <div class="accordion-item" id="member-declaration">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span><span class="accordion-icon">🤝</span> Member Declaration & Club Oath</span>
+                            <span class="accordion-arrow">▼</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <div class="oath-box">
+                                    <h4
+                                        style="color:var(--neon-green); font-family:var(--font-heading); margin-bottom:1rem;">
+                                        📜 CSSC Member Oath</h4>
+                                    <p style="font-style:italic; line-height:2; color:var(--text-primary);">
+                                        "I, as a member of the Cyber Security Students Club, solemnly declare that I
+                                        will use the knowledge and skills
+                                        gained through this club only for ethical, legal, and constructive purposes. I
+                                        will not engage in any unauthorized
+                                        access, data theft, network intrusion, or any activity that violates the law or
+                                        compromises the privacy of others.
+                                        I commit to upholding the principles of responsible disclosure, digital
+                                        integrity, and cyber ethics in all my
+                                        activities, both within and outside the club. I understand that violation of
+                                        this oath may result in immediate
+                                        expulsion from the club and potential legal consequences."
+                                    </p>
+                                    <p
+                                        style="margin-top:1rem; color:var(--neon-green); font-family:var(--font-mono); font-size:0.9rem;">
+                                        — Signed upon registration by all CSSC members
+                                    </p>
+                                </div>
+
+                                <h4 style="margin-top:1.5rem;">Declaration Points</h4>
+                                <ul class="policy-list">
+                                    <li>I declare that all information provided during registration is accurate and
+                                        truthful.</li>
+                                    <li>I understand that I am responsible for any activities conducted using my club
+                                        credentials.</li>
+                                    <li>I agree to immediately report any security incidents or violations to club
+                                        leadership.</li>
+                                    <li>I declare that I have read and understood all club policies and agree to comply
+                                        with them.</li>
+                                    <li>I understand that my membership may be revoked for policy violations without
+                                        refund of fees.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Code of Ethics -->
+                    <div class="accordion-item" id="code-of-ethics">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span><span class="accordion-icon">⚖️</span> Code of Ethics</span>
+                            <span class="accordion-arrow">▼</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <h4>3.1 Professional Conduct</h4>
+                                <p>All members shall conduct themselves with professionalism and integrity in all club
+                                    activities, events, and communications. Harassment, discrimination, or intimidation
+                                    of any kind will not be tolerated.</p>
+
+                                <h4>3.2 Technical Integrity</h4>
+                                <p>Members shall not engage in unauthorized hacking, cracking, or exploitation of
+                                    systems. All technical activities must be conducted in approved lab environments,
+                                    with explicit permission, or on personally owned systems.</p>
+
+                                <h4>3.3 Knowledge Sharing</h4>
+                                <p>Members are encouraged to share knowledge but must exercise judgment regarding the
+                                    appropriateness of sharing sensitive technical details (e.g., zero-day exploits,
+                                    unpatched vulnerabilities).</p>
+
+                                <h4>3.4 Respect for Privacy</h4>
+                                <p>Members must respect the privacy and confidentiality of all individuals and
+                                    organizations. Personal data encountered during any security activity must be
+                                    protected and not disclosed or retained unnecessarily.</p>
+
+                                <h4>3.5 Conflict of Interest</h4>
+                                <p>Members must disclose any potential conflicts of interest in club activities,
+                                    especially in competitions, evaluations, or external partnerships.</p>
+
+                                <h4>3.6 Disciplinary Process</h4>
+                                <p>Violations of the Code of Ethics will be reviewed by the ethics committee. Actions
+                                    range from formal warnings to permanent expulsion based on severity. All decisions
+                                    are documented and final after appeal review.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Social Media Policy -->
+                    <div class="accordion-item" id="social-media">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span><span class="accordion-icon">📱</span> Social Media Policy</span>
+                            <span class="accordion-arrow">▼</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <h4>4.1 Official Club Accounts</h4>
+                                <p>Only designated social media managers may post from official CSSC social media
+                                    accounts. Unauthorized use of official accounts will result in immediate membership
+                                    action.</p>
+
+                                <h4>4.2 Personal Posting Guidelines</h4>
+                                <p>When posting about CSSC activities on personal accounts, members must:</p>
+                                <ul class="policy-list">
+                                    <li>Be respectful and accurate in all representations of the club</li>
+                                    <li>Not share confidential club information, member data, or private discussions
+                                    </li>
+                                    <li>Clearly distinguish personal opinions from official club positions</li>
+                                    <li>Not post content that could embarrass the club, university, or other members
+                                    </li>
+                                    <li>Obtain consent before tagging other members in club-related posts</li>
+                                </ul>
+
+                                <h4>4.3 Technical Content Sharing</h4>
+                                <p>Members must not share exploit code, malware samples, or sensitive security research
+                                    on public platforms without proper disclosure completion and club leadership
+                                    approval.</p>
+
+                                <h4>4.4 Prohibited Content</h4>
+                                <p>Members may not post content that is defamatory, obscene, discriminatory, or that
+                                    violates intellectual property rights while representing CSSC.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Legal Compliance -->
+                    <div class="accordion-item" id="legal">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span><span class="accordion-icon">🏛️</span> Legal Compliance</span>
+                            <span class="accordion-arrow">▼</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <h4>5.1 Applicable Laws</h4>
+                                <p>All members must comply with applicable Indian and international laws, including but
+                                    not limited to:</p>
+                                <ul class="policy-list">
+                                    <li>Information Technology Act, 2000 and IT (Amendment) Act, 2008</li>
+                                    <li>Indian Penal Code (relevant cyber crime sections)</li>
+                                    <li>Personal Data Protection Bill (India)</li>
+                                    <li>Computer Fraud and Abuse Act (for US-hosted systems)</li>
+                                    <li>GDPR (for European user data)</li>
+                                    <li>University IT usage policy</li>
+                                </ul>
+
+                                <h4>5.2 Data Protection</h4>
+                                <p>Member personal data collected during registration is stored securely and used only
+                                    for club administration purposes. Data will not be shared with third parties without
+                                    explicit consent, except as required by law.</p>
+
+                                <h4>5.3 Liability</h4>
+                                <p>CSSC and the university are not liable for any unauthorized or illegal activities
+                                    conducted by individual members. Each member is personally and legally responsible
+                                    for their own actions.</p>
+
+                                <h4>5.4 Law Enforcement Cooperation</h4>
+                                <p>CSSC will cooperate fully with law enforcement investigations involving club members
+                                    or resources. Member anonymity will not be protected in cases of criminal conduct.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Risk Acknowledgement -->
+                    <div class="accordion-item" id="risk">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span><span class="accordion-icon">⚠️</span> Risk Acknowledgement</span>
+                            <span class="accordion-arrow">▼</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <div class="risk-warning">
+                                    <h4>⚠️ Important Risk Disclosure</h4>
+                                    <p>Cybersecurity activities inherently involve risks. By joining CSSC, members
+                                        acknowledge the following:</p>
+                                </div>
+
+                                <h4 style="margin-top:1.5rem;">6.1 Technical Risks</h4>
+                                <p>Security testing activities carry risks of unintended system damage, data loss, or
+                                    service disruption even in authorized environments. Members must exercise caution
+                                    and follow all safety protocols.</p>
+
+                                <h4>6.2 Legal Risks</h4>
+                                <p>Members acknowledge that performing security testing without proper authorization is
+                                    illegal and may result in criminal prosecution. CSSC provides no legal protection
+                                    for unauthorized activities conducted by members.</p>
+
+                                <h4>6.3 Reputational Risks</h4>
+                                <p>Members understand that unethical behavior or policy violations may result in
+                                    academic consequences, including notation on university records, in addition to club
+                                    disciplinary action.</p>
+
+                                <h4>6.4 Physical Lab Risks</h4>
+                                <p>Members using physical lab equipment acknowledge responsibility for proper handling.
+                                    Damage due to negligence may result in financial liability to the member.</p>
+
+                                <h4>6.5 Member Acknowledgement</h4>
+                                <p>By registering as a CSSC member, you acknowledge that you have read, understood, and
+                                    accept all risks described in this section. You confirm that you will seek guidance
+                                    from club leadership before attempting any activities that may carry legal or
+                                    technical risk.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- end accordion -->
+
+                <div class="policy-footer-note reveal">
+                    <p>For questions about any policy, contact the CSSC leadership team at <a
+                            href="mailto:cssc@university.edu">cssc@university.edu</a> or speak with our Faculty Mentor.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="CSSC" class="footer-logo" onerror="this.style.display='none';" />
+                    <h3 class="footer-title">CSSC</h3>
+                    <p class="footer-tagline">Cyber Security Students Club</p>
+                    <p class="footer-about">A university technical club dedicated to cybersecurity education, ethical
+                        hacking, and digital responsibility.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About CSSC</a></li>
+                        <li><a href="ethics.html">Cyber Ethics</a></li>
+                        <li><a href="policies.html">Policies</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="register.html">Join Club</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Policy Sections</h4>
+                    <ul>
+                        <li><a href="#terms">Terms & Conditions</a></li>
+                        <li><a href="#member-declaration">Member Declaration</a></li>
+                        <li><a href="#code-of-ethics">Code of Ethics</a></li>
+                        <li><a href="#social-media">Social Media Policy</a></li>
+                        <li><a href="#legal">Legal Compliance</a></li>
+                        <li><a href="#risk">Risk Acknowledgement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Connect With Us</h4>
+                    <p>📧 <a href="mailto:cssc@university.edu">cssc@university.edu</a></p>
+                    <p>🏛️ Department of Computer Science, University Campus</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">GH</a>
+                        <a href="#" class="social-link">IN</a>
+                        <a href="#" class="social-link">TW</a>
+                        <a href="#" class="social-link">IG</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Cyber Security Students Club (CSSC) · All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
