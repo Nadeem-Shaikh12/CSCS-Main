@@ -140,11 +140,23 @@ def migrate_csv_to_db():
                     )
                     db.session.add(m)
                 db.session.commit()
-            print(f"Migration complete. Archiving members.csv...")
-            os.rename(csv_path, csv_path + ".bak")
+            print(f"Migration complete.")
+            
+            # Only rename if not on Vercel (read-only filesystem)
+            if not os.environ.get('VERCEL'):
+                os.rename(csv_path, csv_path + ".bak")
+                print("Archived members.csv")
+            else:
+                print("Skipping file rename on Vercel environment.")
+                
         except Exception as e:
             print(f"Migration error: {e}")
             db.session.rollback()
+
+# Ensure DB is initialized when module is loaded (important for Vercel)
+with app.app_context():
+    db.create_all()
+    migrate_csv_to_db()
 
 # ============================================================
 # AUTHENTICATION DECORATOR
@@ -533,10 +545,6 @@ def admin_download():
 # RUN
 # ============================================================
 if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()
-        migrate_csv_to_db()
-    
     port = int(os.environ.get('PORT', 5000))
     # debug=True for dev, change to False for prod
     app.run(debug=True, host='127.0.0.1', port=port)
