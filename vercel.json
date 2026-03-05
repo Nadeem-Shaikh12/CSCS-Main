@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/admin(.*)",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/register(.*)",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/frontend/$1"
+    }
+  ],
+  "functions": {
+    "api/index.py": {
+      "runtime": "vercel-python@0.1.0"
+    }
+  }
+}

@@ -30,7 +30,16 @@ app = Flask(__name__)
 
 # CONFIGURATION
 app.secret_key = os.environ.get('SECRET_KEY', 'default_secret_low_security')
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///cssc_members.db')
+
+# Detect if running on Vercel (read-only filesystem)
+is_vercel = os.environ.get('VERCEL', False)
+if is_vercel:
+    # Use /tmp for SQLite in Vercel's serverless environment
+    db_path = os.path.join('/tmp', 'cssc_members.db')
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{db_path}'
+else:
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///cssc_members.db')
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
