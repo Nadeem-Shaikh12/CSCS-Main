@@ -10,10 +10,6 @@
             "destination": "/api/index.py"
         },
         {
-            "source": "/register(.*)",
-            "destination": "/api/index.py"
-        },
-        {
             "source": "/assets/(.*)",
             "destination": "/frontend/assets/$1"
         },
