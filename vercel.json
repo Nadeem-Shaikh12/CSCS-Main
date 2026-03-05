@@ -10,12 +10,20 @@
             "destination": "/api/index.py"
         },
         {
-            "source": "/register(.*)",
-            "destination": "/api/index.py"
+            "source": "/",
+            "destination": "/frontend/index.html"
+        },
+        {
+            "source": "/assets/(.*)",
+            "destination": "/frontend/assets/$1"
+        },
+        {
+            "source": "/(.*)\\.(js|css|png|jpg|jpeg|svg|ico|gif)",
+            "destination": "/frontend/$1.$2"
         },
         {
             "source": "/(.*)",
-            "destination": "/frontend/$1"
+            "destination": "/frontend/$1.html"
         }
     ],
     "functions": {

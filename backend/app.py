@@ -176,6 +176,7 @@ def index():
     return jsonify({'status': 'CSSC Backend Running', 'version': '2.0 (SQLite)'})
 
 @app.route('/register', methods=['POST'])
+@app.route('/api/register', methods=['POST'])
 def register():
     try:
         data = request.get_json(silent=True)
