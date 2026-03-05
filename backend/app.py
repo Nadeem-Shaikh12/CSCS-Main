@@ -166,17 +166,6 @@ def login_required(f):
     def decorated(*args, **kwargs):
         if not session.get('admin_logged_in'):
             return redirect(url_for('admin_login'))
-        
-        # Verify if current session token matches the one in the DB
-        # This prevents multiple concurrent logins (Single Session Enforcement)
-        access = AdminAccess.query.first()
-        current_token = session.get('admin_token')
-        
-        if not access or not current_token or access.active_token != current_token:
-            # Token mismatch or stale session -> Force re-login
-            session.clear()
-            return redirect(url_for('admin_login'))
-            
         return f(*args, **kwargs)
     return decorated
 
@@ -475,12 +464,7 @@ def admin_panel():
 @app.route('/admin/login', methods=['GET', 'POST'])
 def admin_login():
     if session.get('admin_logged_in'):
-        # Check if current session is still valid even if flag is set
-        access = AdminAccess.query.first()
-        if access and session.get('admin_token') == access.active_token:
-            return redirect(url_for('admin_panel'))
-        else:
-            session.clear()
+        return redirect(url_for('admin_panel'))
 
     error = None
     if request.method == 'POST':
