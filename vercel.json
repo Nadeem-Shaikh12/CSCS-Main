@@ -10,8 +10,8 @@
             "destination": "/api/index.py"
         },
         {
-            "source": "/",
-            "destination": "/frontend/index.html"
+            "source": "/register(.*)",
+            "destination": "/api/index.py"
         },
         {
             "source": "/assets/(.*)",
@@ -25,10 +25,5 @@
             "source": "/(.*)",
             "destination": "/frontend/$1.html"
         }
-    ],
-    "functions": {
-        "api/index.py": {
-            "runtime": "@vercel/python"
-        }
-    }
+    ]
 }

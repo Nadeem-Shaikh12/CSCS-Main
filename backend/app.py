@@ -69,12 +69,6 @@ class Member(db.Model):
     accept_terms = db.Column(db.Boolean, default=False)
     registered_at = db.Column(db.DateTime, default=datetime.utcnow)
 
-class AdminAccess(db.Model):
-    """Tracks the active session token to enforce single-session access."""
-    id = db.Column(db.Integer, primary_key=True)
-    active_token = db.Column(db.String(100), nullable=True)
-    last_login = db.Column(db.DateTime, default=datetime.utcnow)
-
     def to_dict(self):
         return {
             'ID': self.member_id,
@@ -89,6 +83,14 @@ class AdminAccess(db.Model):
             'Accept Terms': 'Yes' if self.accept_terms else 'No',
             'Registered At': self.registered_at.strftime('%Y-%m-%d %H:%M:%S')
         }
+
+class AdminAccess(db.Model):
+    """Tracks the active session token to enforce single-session access."""
+    id = db.Column(db.Integer, primary_key=True)
+    active_token = db.Column(db.String(100), nullable=True)
+    last_login = db.Column(db.DateTime, default=datetime.utcnow)
+
+    last_login = db.Column(db.DateTime, default=datetime.utcnow)
 
 # ============================================================
 # HELPERS
