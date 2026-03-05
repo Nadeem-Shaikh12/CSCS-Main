@@ -140,12 +140,15 @@ def migrate_csv_to_db():
                     )
                     db.session.add(m)
                 db.session.commit()
-            print(f"Migration complete.")
+            print("Migration complete.")
             
             # Only rename if not on Vercel (read-only filesystem)
             if not os.environ.get('VERCEL'):
-                os.rename(csv_path, csv_path + ".bak")
-                print("Archived members.csv")
+                bak_path = csv_path + ".bak"
+                if os.path.exists(bak_path):
+                    os.remove(bak_path)
+                os.rename(csv_path, bak_path)
+                print(f"Archived members.csv as {bak_path}")
             else:
                 print("Skipping file rename on Vercel environment.")
                 
@@ -154,9 +157,12 @@ def migrate_csv_to_db():
             db.session.rollback()
 
 # Ensure DB is initialized when module is loaded (important for Vercel)
-with app.app_context():
-    db.create_all()
-    migrate_csv_to_db()
+try:
+    with app.app_context():
+        db.create_all()
+        # migrate_csv_to_db() # Disabled by default on cold starts to save time, enable if needed
+except Exception as e:
+    print(f"Early initialization error: {e}")
 
 # ============================================================
 # AUTHENTICATION DECORATOR
