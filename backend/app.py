@@ -90,8 +90,6 @@ class AdminAccess(db.Model):
     active_token = db.Column(db.String(100), nullable=True)
     last_login = db.Column(db.DateTime, default=datetime.utcnow)
 
-    last_login = db.Column(db.DateTime, default=datetime.utcnow)
-
 # ============================================================
 # HELPERS
 # ============================================================
