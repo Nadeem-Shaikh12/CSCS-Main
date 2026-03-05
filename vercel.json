@@ -1,5 +1,7 @@
 {
     "version": 2,
+    "cleanUrls": true,
+    "trailingSlash": false,
     "rewrites": [
         {
             "source": "/api/(.*)",
@@ -10,16 +12,8 @@
             "destination": "/api/index.py"
         },
         {
-            "source": "/assets/(.*)",
-            "destination": "/frontend/assets/$1"
-        },
-        {
-            "source": "/",
-            "destination": "/frontend/index.html"
-        },
-        {
-            "source": "/(.*)",
-            "destination": "/frontend/$1"
+            "source": "/register(.*)",
+            "destination": "/api/index.py"
         }
     ]
 }
