@@ -29,21 +29,43 @@ load_dotenv()
 app = Flask(__name__)
 
 # CONFIGURATION
-app.secret_key = os.environ.get('SECRET_KEY', 'default_secret_low_security')
+secret = os.environ.get('SECRET_KEY')
+if not secret:
+    import secrets
+    print("WARNING: No SECRET_KEY set. Generating a temporary key. Sessions will invalidate on server restart.")
+    secret = secrets.token_hex(32)
+app.secret_key = secret
 
 # Detect if running on Vercel (read-only filesystem)
 is_vercel = os.environ.get('VERCEL', False)
-if is_vercel:
+db_url = os.environ.get('DATABASE_URL')
+
+if db_url:
+    app.config['SQLALCHEMY_DATABASE_URI'] = db_url
+elif is_vercel:
     # Use /tmp for SQLite in Vercel's serverless environment
+    print("WARNING: Using ephemeral SQLite database in Vercel /tmp. Data will be lost on cold starts. Set DATABASE_URL to a persistent database.")
     db_path = os.path.join('/tmp', 'cssc_members.db')
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{db_path}'
 else:
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///cssc_members.db')
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///cssc_members.db'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 CORS(app)
+
+# ============================================================
+# SECURITY HEADERS
+# ============================================================
+@app.after_request
+def add_security_headers(response):
+    response.headers['Content-Security-Policy'] = "default-src 'self';"
+    response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
+    response.headers['X-Content-Type-Options'] = 'nosniff'
+    response.headers['X-Frame-Options'] = 'SAMEORIGIN'
+    response.headers['Cross-Origin-Resource-Policy'] = 'same-origin'
+    return response
 
 # Admin credentials
 ADMIN_USERNAME = os.environ.get('ADMIN_USER', 'admin')
@@ -172,6 +194,14 @@ def login_required(f):
     def decorated(*args, **kwargs):
         if not session.get('admin_logged_in'):
             return redirect(url_for('admin_login'))
+            
+        session_token = session.get('admin_token')
+        access = AdminAccess.query.first()
+        if not access or access.active_token != session_token:
+            # Token mismatch: another admin logged in elsewhere or session invalidated
+            session.clear()
+            return redirect(url_for('admin_login'))
+            
         return f(*args, **kwargs)
     return decorated
 
