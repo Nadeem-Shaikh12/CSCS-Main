@@ -35,13 +35,8 @@
             "destination": "/api/index.py"
         },
         {
-            "source": "/admin(.*)",
+            "source": "/admin/?(.*)",
             "destination": "/api/index.py"
         }
-    ],
-    "functions": {
-        "api/index.py": {
-            "runtime": "@vercel/python"
-        }
-    }
+    ]
 }
